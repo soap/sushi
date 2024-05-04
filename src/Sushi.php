@@ -167,6 +167,9 @@ trait Sushi
                     case is_object($value) && $value instanceof \DateTime:
                         $type = 'dateTime';
                         break;
+                    case is_array($value):
+                        $type = 'json';
+                        break;
                     default:
                         $type = 'string';
                 }
